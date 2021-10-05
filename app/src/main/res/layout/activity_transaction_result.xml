@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TransactionResultActivity">
+
+    <include layout="@layout/comon_toolbar_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co_ordinatorLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+             <LinearLayout
+                 android:id="@+id/resultLayout"
+                 android:layout_marginTop="20dp"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:gravity="center_horizontal"
+                 android:layout_height="wrap_content">
+
+                 <RelativeLayout
+                     android:gravity="start"
+                     android:layout_gravity="start"
+                     android:layout_width="wrap_content"
+                     android:layout_marginStart="10dp"
+                     android:layout_height="wrap_content">
+                     <TextView
+                         android:id="@+id/transactionStatus"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Successfully Done"
+                         android:layout_marginTop="10dp"
+                         android:textColor="@color/darkBlue"
+                         android:gravity="start"
+                         android:textSize="25sp"/>
+                     <TextView
+                         android:id="@+id/transactionAmount"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Rs 349.08"
+                         android:layout_below="@+id/transactionStatus"
+                         android:layout_marginTop="5dp"
+                         android:textStyle="bold"
+                         android:gravity="start"
+                         android:textColor="@color/darkBlue"
+                         android:textSize="35sp"/>
+                     <TextView
+                         android:id="@+id/toText"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="To "
+                         android:textColor="@color/darkBlue"
+                         android:gravity="start"
+                         android:layout_below="@+id/transactionAmount"
+                         android:layout_marginTop="3dp"
+                         android:textSize="20sp"/>
+                     <TextView
+                         android:id="@+id/transactionContact"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="+91-9454517680"
+                         android:layout_below="@+id/transactionAmount"
+                         android:layout_toRightOf="@id/toText"
+                         android:layout_marginTop="3dp"
+                         android:padding="5dp"
+                         android:textColor="@color/skyBlue"
+                         android:textSize="15sp"/>
+                     <TextView
+                         android:id="@+id/txnText"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Txn Id: "
+                         android:textColor="@color/darkBlue"
+                         android:layout_below="@+id/toText"
+                         android:layout_marginTop="3dp"
+                         android:gravity="start"
+                         android:textSize="20sp"/>
+                     <TextView
+                         android:id="@+id/transactionID"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="TX12546789034"
+                         android:layout_below="@+id/toText"
+                         android:layout_toRightOf="@id/txnText"
+                         android:layout_marginTop="3dp"
+                         android:padding="5dp"
+                         android:focusable="true"
+                         android:textColor="@color/skyBlue"
+                         android:textSize="15sp"/>
+                     <TextView
+                         android:id="@+id/onText"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="On "
+                         android:gravity="start"
+                         android:textColor="@color/black"
+                         android:layout_below="@+id/txnText"
+                         android:layout_marginTop="3dp"
+                         android:padding="3dp"
+                         android:textSize="10sp"/>
+                     <TextView
+                         android:id="@+id/date"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="29/03/2014 12:00 PM"
+                         android:layout_below="@+id/transactionID"
+                         android:layout_toRightOf="@id/onText"
+                         android:layout_alignTop="@+id/onText"
+                         android:layout_marginTop="3dp"
+                         android:textColor="@color/black"
+                         android:textSize="10sp"/>
+                     <TextView
+                         android:id="@+id/remarks"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/onText"
+                         android:layout_marginTop="3dp"
+                         android:textColor="@color/black"
+                         android:textSize="10sp"/>
+                     <TextView
+                         android:id="@+id/closingBalance"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/remarks"
+                         android:layout_marginTop="3dp"
+                         android:textColor="@color/black"
+                         android:textSize="10sp"/>
+
+                 </RelativeLayout>
+
+                 <ImageView
+                     android:id="@+id/icon"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="end"
+                     android:layout_gravity="end"
+                     android:layout_marginLeft="20dp"
+                     ads:srcCompat="@drawable/successful_icon" />
+
+
+             </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/pagerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_below="@id/resultLayout"
+                android:layout_marginTop="?attr/actionBarSize">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/grey_text" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/mainBalanceCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_below="@+id/pagerLayout"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/balance_card_bg">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    ads:srcCompat="@drawable/main_balance_icon"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginLeft="20dp"
+                    android:padding="10dp"
+                    android:gravity="start">
+
+                    <TextView
+                        android:id="@+id/mainBalanceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Main Balance"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkBlue"
+                        android:fontFamily="@font/beirut"
+                        android:textSize="35sp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/loaderAnimation"
+                        style="@style/AVLoadingIndicatorView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/mainBalanceText"
+                        app:indicatorColor="@color/colorPrimary"
+                        app:indicatorName="BallPulseIndicator" />
+
+                    <TextView
+                        android:id="@+id/mainBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mainBalanceText"
+                        android:textStyle="bold"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="45sp"
+                        android:textSize="40sp"
+                        android:textColor="@color/darkBlue"
+                        android:text="₹ 300000.00"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

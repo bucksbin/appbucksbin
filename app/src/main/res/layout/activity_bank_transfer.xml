@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mainLayout"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PayMoneyActivity">
+
+    <include layout="@layout/comon_toolbar_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co_ordinatorLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/transferAmountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transfer Amount"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/darkBlue"
+                android:textSize="35sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNumberTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transferAmountText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/accountNumberET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Account Number"
+                    android:inputType="numberDecimal"
+                    android:maxLength="16"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountHolderTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accountNumberTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/accountHolderET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Account Holder Name"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="20"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/IFSCCodeTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accountHolderTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/IFSCCodeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="IFSC Code"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="16"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amountTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/IFSCCodeTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amountET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/transferAmountBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/blue_button_bg"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/amountTIL">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/beirut"
+                        android:text="Submit Request"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout2"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_id1">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

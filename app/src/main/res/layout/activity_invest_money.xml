@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMoneyActivity">
+
+    <include layout="@layout/comon_toolbar_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co_ordinatorLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/availableBalanceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/co_ordinatorLayout"
+                android:gravity="center"
+                android:background="@drawable/gradient_loginlayout_bg">
+
+                <TextView
+                    android:id="@+id/availableBalanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Main Balance"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/loader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    style="@style/AVLoadingIndicatorView"
+                    app:indicatorName="BallPulseIndicator"
+                    app:indicatorColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/availableBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/availableBalanceText"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:textColor="@color/white"
+                    android:text=""/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addMoneyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add money to your fixed wallet"
+                android:layout_below="@id/availableBalanceLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/darkBlue"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amountTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addMoneyText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amountET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/addMoneyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/blue_button_bg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/amountTIL">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/beirut"
+                        android:text="Add Money"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fixedBalanceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/addMoneyBtn"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:background="@drawable/gradient_loginlayout_bg">
+
+                <TextView
+                    android:id="@+id/fixedBalanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fixed Balance"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/loader1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    style="@style/AVLoadingIndicatorView"
+                    app:indicatorName="BallPulseIndicator"
+                    app:indicatorColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/fixedBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fixedBalanceText"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:textColor="@color/white"
+                    android:text=""/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/withdrawMoneyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/blue_button_bg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/fixedBalanceLayout">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/beirut"
+                        android:text="Withdraw Money"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="5dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

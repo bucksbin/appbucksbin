@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loaderAnimation"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseIndicator" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/pagerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="?attr/actionBarSize">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/grey_text" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pagerLayout"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/add_money_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="20dp"
+                    ads:srcCompat="@drawable/add_money_icon" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey_text" />
+
+                <ImageView
+                    android:id="@+id/check_balance_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="20dp"
+                    ads:srcCompat="@drawable/check_balance_logo" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey_text" />
+
+                <ImageView
+                    android:id="@+id/transaction_history_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="20dp"
+                    ads:srcCompat="@drawable/transaction_history_icon" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey_text" />
+
+                <ImageView
+                    android:id="@+id/pay_money_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    ads:srcCompat="@drawable/pay_money_icon" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:background="@drawable/gradient_loginlayout_bg"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/prepaid_recharge_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/prepaid_recharge_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/postpaid_recharge_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/postpaid_recharge_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/send_money_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/invest_money_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/gas_bill_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/gas_bill_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/layout21"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout21"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/upi_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/upi_transfer_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/dth_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/dth_recharge_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/electricity_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/electricity_bill_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/bank_transfer_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/bank_transfer_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/discountLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout2"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:id="@+id/createdCards"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        ads:srcCompat="@drawable/created_cards" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:gravity="center|top"
+                        android:text="Created Cards"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey_text" />
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:id="@+id/receivedCards"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        ads:srcCompat="@drawable/received_cards" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:gravity="center|top"
+                        android:text="Received Cards"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey_text" />
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:id="@+id/buyCards"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        ads:srcCompat="@drawable/buy_discount_cards_icon" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:gravity="center|top"
+                        android:text="Buy Cards"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/grey_text" />
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:id="@+id/createCards"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        ads:srcCompat="@drawable/add_button1" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:gravity="center|top"
+                        android:text="Create New"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/pagerLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/discountLayout">
+
+                <ImageView
+                    android:id="@+id/discountCardImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/discount_card_img_1" />
+            </RelativeLayout>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pagerLayout1"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/ad_id1" />
+
+            <RelativeLayout
+                android:id="@+id/aadharText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adView1"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/aadhar_loan_text_icon">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/aadharLoanText"
+                    android:background="@color/lightBlue" />
+
+                <TextView
+                    android:id="@+id/aadharLoanText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/beirut"
+                    android:text="Aadhar Loan"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/aadharLoanText"
+                    android:background="@color/lightBlue" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aadharText"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/loan_eligibility_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="25dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/loan_eligibility_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/loan_application_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="25dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/loan_application_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/fund_generation_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="25dp"
+                        android:paddingBottom="10dp"
+                        ads:srcCompat="@drawable/fund_generation_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightBlue" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/thinLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/layout31"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/lightBlue" />
+
+                <LinearLayout
+                    android:id="@+id/layout32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thinLine1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/emi_calculator_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="25dp"
+                        android:paddingTop="10dp"
+                        ads:srcCompat="@drawable/emi_calculator_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/kyc_approval_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="25dp"
+                        android:paddingTop="10dp"
+                        ads:srcCompat="@drawable/kyc_approval_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="25dp"
+                        android:background="@color/lightBlue" />
+
+                    <ImageView
+                        android:id="@+id/loan_history_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="25dp"
+                        android:paddingTop="10dp"
+                        ads:srcCompat="@drawable/loan_history_icon" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightBlue" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/layout32"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/lightBlue" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

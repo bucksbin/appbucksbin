@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAccountActivity">
+
+    <include layout="@layout/comon_toolbar_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/accountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co_ordinatorLayout">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/accountNumberTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@color/grey"
+            android:layout_marginRight="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/accountNumberET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Account Number"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/darkBlue"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/accountHolderTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@color/grey"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/accountNumberTIL">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/accountHolderET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Account Holder Name"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/darkBlue"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/IFSCCodeTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accountHolderTIL"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@color/grey"
+            android:layout_marginRight="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/IFSCCodeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="IFSC Code"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
+                android:padding="10dp"
+                android:textColor="@color/darkBlue"
+                android:backgroundTint="@color/darkBlue"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pincodeTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IFSCCodeTIL"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@color/grey"
+            android:layout_marginRight="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pincodeET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pincode"
+                android:maxLines="1"
+                android:maxLength="6"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@color/darkBlue"
+                android:backgroundTint="@color/darkBlue"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/blue_button_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/accountLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/beirut"
+                android:text="Add Details"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/submitBtn"
+        android:padding="15dp"
+        android:text="Please provide the correct details as they will be used for purpose of bank transfers and will not be further updated."/>
+
+</RelativeLayout>

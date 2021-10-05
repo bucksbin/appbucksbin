@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PayMoneyActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/comon_toolbar_layout" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loaderAnimation"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseIndicator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/co_ordinatorLayout">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/DiscountCardTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Discount Card"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="35sp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/shopNameTF"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/DiscountCardTxt"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="10dp"
+                                android:textAllCaps="true"
+                                android:textColorHint="@color/grey">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/shopNameET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/darkBlue"
+                                    android:clickable="true"
+                                    android:hint="Shop Name "
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="30"
+                                    android:singleLine="true"
+                                    android:textColor="@color/darkBlue" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/shopNameTIL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/shopNameTF"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="10dp"
+                                android:textColorHint="@color/grey">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/shopAddressET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/darkBlue"
+                                    android:clickable="true"
+                                    android:hint="Shop Address "
+                                    android:inputType="textCapWords"
+                                    android:maxLength="150"
+                                    android:textColor="@color/darkBlue" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/coustomerNameTF"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/shopNameTIL"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="10dp"
+                                android:maxLength="30"
+                                android:textAllCaps="true"
+                                android:textColorHint="@color/grey">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/customerNameET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/darkBlue"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:hint="Customer Name"
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="25"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/darkBlue" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/mobileNumberTF"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/coustomerNameTF"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="10dp"
+                                android:textColorHint="@color/grey">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/mobileNumberET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/darkBlue"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/contacts_icon"
+                                    android:focusable="true"
+                                    android:hint="Mobile Number"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="10"
+                                    android:padding="10dp"
+                                    android:textColor="@color/darkBlue" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/DiscountTIL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mobileNumberTF"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="10dp"
+                                android:textColorHint="@color/grey">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/discountET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/darkBlue"
+                                    android:hint="Discount %"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="2"
+                                    android:padding="10dp"
+                                    android:textColor="@color/darkBlue" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/createDiscountBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_below="@id/DiscountTIL"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="30dp"
+                                android:background="@drawable/blue_button_bg">
+
+
+                                <LinearLayout
+                                    android:id="@+id/buttonCreate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:fontFamily="@font/beirut"
+                                        android:text="Create"
+                                        android:textColor="@color/white"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_id1"></com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

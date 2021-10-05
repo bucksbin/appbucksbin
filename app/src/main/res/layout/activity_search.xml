@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SearchActivity">
+
+        <AutoCompleteTextView
+            android:id="@+id/SearchText"
+            android:layout_weight="8.5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:height="50dp"
+            android:padding="7dp"
+            android:hint="Search"
+            android:layout_gravity="center"
+            android:maxEms="1"
+            android:elevation="5dp"
+            android:singleLine="true"
+            android:drawableRight="@drawable/search_icon"
+            android:drawableTint="@color/black"
+            android:background="@color/white"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SearchLayout"
+        >
+
+    </ListView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SearchLayout"
+        android:layout_centerInParent="true"
+        android:visibility="invisible">
+    </RelativeLayout>
+
+</RelativeLayout>

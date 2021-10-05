@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">BucksBin</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="company_mobile">tel:+919759941944</string>
+    <string name="company_mail">app.bucksbin@gmail.com</string>
+    <string name="mail_subject">Issue Regarding buckBin</string>
+    <string name="mail_message_prefix">Complaint Regarding E-arning app:</string>
+    <string name="occupationPrompt">Select occupation Type</string>
+    <!--    <string name="pay2all_token">NVclNFjASSnHGBtyv2jv6bAdmNTCNPlAKeOQ6C4BtozjyQocIKHw9XJHn3Od</string>-->
+    <string name="pay2all_token">eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMxOGRiMDEzNjdmOWY3NDc0NDgzNTE3ODFjOGMzNjMyZGI2NmEyNzZlYzMzMGFiMzhkNmQxMGM2NjZkMjcxY2ZhNTc1Y2VkYWM4ZDg3YjQzIn0.eyJhdWQiOiIxIiwianRpIjoiMzE4ZGIwMTM2N2Y5Zjc0NzQ0ODM1MTc4MWM4YzM2MzJkYjY2YTI3NmVjMzMwYWIzOGQ2ZDEwYzY2NmQyNzFjZmE1NzVjZWRhYzhkODdiNDMiLCJpYXQiOjE2Mjc1ODEwNTUsIm5iZiI6MTYyNzU4MTA1NSwiZXhwIjoxNjU5MTE3MDU1LCJzdWIiOiI0ODEiLCJzY29wZXMiOltdfQ.CnmawB_t7M5xySBsXeCU4xZnvLRQ81JRvAYnxzF9ctp9bm_gxjla9je62w9XS_j1vp4ZEnPL1XDnTijRZ1-D_LZab_DAAI_Y8P5DGYJR-QHjRemT0u3Pb58AUMzOENnIZSjI_kRHgfjbYlwsIfRjvUHe_j1Yw39SHbYL03-ilMGeCb4T_Ax20Pu12gxqN15AbZKW7XXWIIyWxhBTsOqDvmqRbqyw7KoRbz9K91fwg5vOBxqic8K84ZtRZoJEMM85MIXLGd2iRVI50qRHzmQscMskcM4PEqd_jRRxt2gVx5Pee5tXDGbzj6HX1N1953jUuPCMhDY5V3b7gWunp-T4wYXCoHpU16ihJ2effAT_OlOU5VpH0IeFoIM926V7xJF7HNXrcxBLRB5LOyUXosOrmGRfsbs16qXnKcI2NmjfsUE9BUeXd4egiC3D42sNboFSmmuSAHlwyELfojDfMUKfJOObLSQ9ZT5M_LsmyjXe-P5boz-L7Urlx5kctVYYsrbNI9ph2BEbn3T5K0kwRxC4dTxVhim309plur9P2SV5FJQkY_As_NL9AB8FUoFcdCYrwvRyhx4QZ_tMWwFjN7Lg1OV4q_lHwjzxknz2qGgsgh-P0J4sczqUII9GmEzQ4zZbcgwwbHCFa2b2LiBpBKCssWQeqaG5VcNgGxXxeTmfiFQ</string>
+    <string name="pending">PENDING</string>
+    <string name="notification_channel_id">default</string>
+    <string name="admob_app_id">ca-app-pub-4472031981747138~2814918450</string>
+    <string name="ad_id1">ca-app-pub-4472031981747138/2693473802</string>
+    <string name="tAndCLink">https://drive.google.com/file/d/1Z42kFAnLAQWAWvVyQdMhsGf-1Pf43Ebj/view?usp=drivesdk</string>
+    <string name="aboutUsLink">https://drive.google.com/file/d/1H5TYNjzhcLr8EdCbhPIOMCi_7JL5IVYH/view?usp=drivesdk</string>
+    <string name="privacyPolicyLink">https://drive.google.com/file/d/1Oavu3HZrscPnHN1pCyNZLCuXveaD9VEd/view?usp=drivesdk</string>
+    <string name="refundPolicyLink">https://drive.google.com/file/d/14g9lhjotmmnHO_CYKgcPpUVCzq__G5Mg/view?usp=sharing</string>
+    <string-array name="occupation_arrays">
+        <item>Employee</item>
+        <item>Businessman</item>
+        <item>Labour</item>
+    </string-array>
+
+    <string-array name="activity_list">
+        <item>Home</item>
+        <item>View Profile</item>
+        <item>Edit Profile</item>
+        <item>Notification</item>
+        <item>FAQs</item>
+        <item>Contact us</item>
+        <item>Add Money</item>
+        <item>Check Balance</item>
+        <item>Invest Money</item>
+        <item>Transaction History</item>
+        <item>Pay Money</item>
+        <item>Prepaid Recharge</item>
+        <item>Postpaid Recharge</item>
+        <item>DTH Recharge</item>
+        <item>Gas Bill</item>
+        <item>Electricity Bill</item>
+        <item>Bank Transfer</item>
+        <item>Check Loan Eligibility</item>
+        <item>Apply for Loan</item>
+        <item>Fund Generation</item>
+        <item>EMI calculator</item>
+        <item>KYC Approval</item>
+        <item>Loan History</item>
+        <item>Create new discount card</item>
+        <item>Buy discount cards</item>
+        <item>Received cards</item>
+        <item>Created cards</item>
+    </string-array>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoanEligibilityActivity">
+
+    <include layout="@layout/comon_toolbar_layout"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/AVLoadingIndicatorView"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/white"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co_ordinatorLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/loan_record_card_bg"
+                android:layout_marginRight="30dp">
+
+                <TextView
+                    android:id="@+id/totalLoanText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Loan Credited"
+                    android:fontFamily="@font/gibson_regular"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="35sp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/totalLoanAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalLoanText"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gibson_regular"
+                    android:textSize="35sp"
+                    android:textColor="@color/darkBlue"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+            android:gravity="center"
+                android:layout_below="@+id/layout1"
+            android:background="@drawable/loan_record_card_bg"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:id="@+id/loanPaidText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid"
+                android:fontFamily="@font/gibson_regular"
+                android:textColor="@color/darkBlue"
+                android:textSize="35sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/paidLoanAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loanPaidText"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:fontFamily="@font/gibson_regular"
+                android:textSize="35sp"
+                android:textColor="@color/darkBlue"/>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_below="@+id/layout2"
+            android:background="@drawable/loan_record_card_bg"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:id="@+id/dueLoanText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Amount"
+                android:fontFamily="@font/gibson_regular"
+                android:textColor="@color/darkBlue"
+                android:textSize="35sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/dueLoanAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dueLoanText"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:fontFamily="@font/gibson_regular"
+                android:textSize="35sp"
+                android:textColor="@color/darkBlue"/>
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout2"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_id1">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

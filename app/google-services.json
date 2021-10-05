@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "562866266447",
+    "firebase_url": "https://bucksbin5398.firebaseio.com",
+    "project_id": "bucksbin5398",
+    "storage_bucket": "bucksbin5398.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562866266447:android:d707c1d8fb10f5e2",
+        "android_client_info": {
+          "package_name": "com.commercial.askitloud.bucksbinadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562866266447-8uu8u030e0ldpq9hnq2jbq3cf9p5aoch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOoCQk3yHJ5aupyxU-o--ZicIAJ1UqAGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562866266447-8uu8u030e0ldpq9hnq2jbq3cf9p5aoch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562866266447:android:e21fe23d76ac25cc3de53a",
+        "android_client_info": {
+          "package_name": "com.commercial.tuds.earnandpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562866266447-6q1ck66s454gr087mg1udp7hmt3s08i2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commercial.tuds.earnandpay",
+            "certificate_hash": "1dfbdd54d6701a8d2da73958fc86b630dde19e47"
+          }
+        },
+        {
+          "client_id": "562866266447-i6ipiv88h866tf4cfq71uapvjl30tsm8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commercial.tuds.earnandpay",
+            "certificate_hash": "d46728b141c893f18eaf6e434149033c222c53c9"
+          }
+        },
+        {
+          "client_id": "562866266447-ou2snpues1j6k01s98t4etqug6ecoh43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commercial.tuds.earnandpay",
+            "certificate_hash": "9520f772e83af00301ffcf303f32bd22d9aceac6"
+          }
+        },
+        {
+          "client_id": "562866266447-ufn3bpjl6evbcj2shcacjquumq3099hb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commercial.tuds.earnandpay",
+            "certificate_hash": "664f83f3769f774a22bd736e7c103f211e58d4eb"
+          }
+        },
+        {
+          "client_id": "562866266447-8uu8u030e0ldpq9hnq2jbq3cf9p5aoch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOoCQk3yHJ5aupyxU-o--ZicIAJ1UqAGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562866266447-8uu8u030e0ldpq9hnq2jbq3cf9p5aoch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

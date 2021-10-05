@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoanApplicationActivity">
+
+    <include layout="@layout/comon_toolbar_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co_ordinatorLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/loanApplicationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply For Loan"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/darkBlue"
+                android:textSize="35sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loanApplicationText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameET"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:hint="Name*"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fatherNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fatherNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Father's Name*"
+                    android:inputType="textCapWords"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="@color/darkBlue"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/motherNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fatherNameTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/motherET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:hint="Mother's Name*"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/flatNumberTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motherNameTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/flatNumberET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="Flat Number"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/streetTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flatNumberTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/streetET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="Street/Village*"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pincodeTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/streetTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pincodeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="Pincode*"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cityTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pincodeTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cityET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City*"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/districtTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cityTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/districtET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="District*"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/stateTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/districtTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/stateET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State*"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:backgroundTint="@color/darkBlue"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/aadharTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stateTIL"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/grey"
+                android:layout_marginRight="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aadharET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Aadhar Number*"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlue"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/occupationType"
+                android:layout_width="match_parent"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/aadharTIL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:prompt="@string/occupationPrompt"
+                android:entries="@array/occupation_arrays"
+                android:layout_marginStart="10dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/darkBlue"
+                android:backgroundTint="@color/darkBlue"/>
+
+            <RelativeLayout
+                android:id="@+id/employeeLayout"
+                android:layout_width="match_parent"
+                android:layout_below="@id/occupationType"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/uploadText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload your recent salary slip"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/grey"
+                    android:textSize="20sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/uploadBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/blue_button_bg"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@id/uploadText">
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/buttonLoader"
+                        style="@style/AVLoadingIndicatorView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"
+                        app:indicatorColor="@color/white"
+                        app:indicatorName="BallClipRotatePulseIndicator" />
+                        <TextView
+                            android:id="@+id/buttonText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:fontFamily="@font/beirut"
+                            android:text="Upload Slip"
+                            android:textSize="25sp"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="5dp" />
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/labourLayout"
+                android:layout_width="match_parent"
+                android:layout_below="@id/occupationType"
+                android:visibility="gone"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/gasConnectionNumberTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/grey"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/gasConnectionNumberET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gas Connection Number*"
+                        android:maxLines="1"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="@color/darkBlue"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/gasAccNoTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gasConnectionNumberTIL"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/grey"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/gasAccNoET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gas Subsidy Account Number*"
+                        android:maxLines="1"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="@color/darkBlue"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gasAccNoTIL"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/grey"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/gasBankET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gas Subsidy Bank*"
+                        android:padding="10dp"
+                        android:maxLines="1"
+                        android:textColor="@color/darkBlue"
+                        android:backgroundTint="@color/darkBlue"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/accountLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/employeeLayout">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/accountNumberTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/grey"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/accountNumberET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Account Number"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColor="@color/darkBlue"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/accountHolderTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/grey"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@id/accountNumberTIL">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/accountHolderET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Account Holder Name"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/darkBlue"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/IFSCCodeTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accountHolderTIL"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/grey"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/IFSCCodeET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="IFSC Code"
+                        android:maxLines="1"
+                        android:inputType="textCapCharacters"
+                        android:padding="10dp"
+                        android:textColor="@color/darkBlue"
+                        android:backgroundTint="@color/darkBlue"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/applyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/blue_button_bg"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="60dp"
+                android:layout_below="@id/accountLayout">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/beirut"
+                        android:text="Apply"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="5dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

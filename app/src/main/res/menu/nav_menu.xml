@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:textColor="#043927"
+            android:title="Home"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_icon"
+            android:title="Profile"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/notification_icon"
+            android:title="Notification"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_benificiary"
+            android:icon="@drawable/logout_icon"
+            android:title="Add Your Bank Details"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_yourCards"
+            android:icon="@drawable/your_cards"
+            android:title="Your Cards"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_yourCreatedCards"
+            android:icon="@drawable/your_created_cards"
+            android:title="Your Created Cards"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/faq_icon"
+            android:title="FAQ"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tandc"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Terms and Conditions"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/ic_verified_user_black_24dp"
+            android:title="About Us"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_privacyPolicy"
+            android:icon="@drawable/ic_note_black_24dp"
+            android:title="Privacy Policy"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/contact_us_icon"
+            android:title="Contact us"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout_icon"
+            android:title="Log Out"
+            android:iconTint="@color/darkBlue"/>
+    </group>
+
+</menu>
